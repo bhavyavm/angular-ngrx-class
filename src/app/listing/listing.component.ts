@@ -1,15 +1,15 @@
-import { Component, OnInit } from "@angular/core";
+import { Component, OnInit } from '@angular/core';
 import { Observable } from "rxjs";
 import { Store } from "@ngrx/store";
 import { Student } from "./../models/student.model";
 import { StudentState } from "./../app.state";
 
 @Component({
-  selector: "app-read",
-  templateUrl: "./read.component.html",
-  styleUrls: ["./read.component.css"]
+  selector: 'app-listing',
+  templateUrl: './listing.component.html',
+  styleUrls: ['./listing.component.css']
 })
-export class ReadComponent implements OnInit {
+export class ListingComponent implements OnInit {
   students: Observable<Student[]>;
   constructor(private store: Store<StudentState>) {}
 

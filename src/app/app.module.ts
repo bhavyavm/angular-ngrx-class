@@ -2,10 +2,10 @@ import { NgModule } from "@angular/core";
 import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
-import { HelloComponent } from "./hello.component";
 import { StoreModule } from "@ngrx/store";
 import { studentReducer } from "./reducers/student.reducer";
-import { NgGCReadComponent } from './ng/ng.component';
+import { ListingComponent } from "./listing/listing.component";
+import { AddStudentComponent } from "./add-student/add-student.component";
 
 @NgModule({
   imports: [
@@ -13,7 +13,7 @@ import { NgGCReadComponent } from './ng/ng.component';
     FormsModule,
     StoreModule.forRoot({ students: studentReducer })
   ],
-  declarations: [AppComponent, HelloComponent, NgGCReadComponent],
+  declarations: [AppComponent, AddStudentComponent, ListingComponent],
   bootstrap: [AppComponent]
 })
 export class AppModule {}
