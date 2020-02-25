@@ -1,0 +1,19 @@
+<div class="right" *ngIf="students">
+	<h3>Student List</h3>
+	<table class="table">
+		<thead>
+			<th>Name</th>
+			<th>Age</th>
+			<th>Subject</th>
+      <th></th>
+		</thead>
+		<tbody>
+			<tr *ngFor="let student of students | async;let i=index;">
+				<td>{{ student.name }}</td>
+				<td>{{ student.age }}</td>
+				<td>{{ student.subject }}</td>
+				<td><button (click)="removeStudent(i)">-</button></td>
+			</tr>
+		</tbody>
+	</table>
+</div>

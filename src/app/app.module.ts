@@ -3,7 +3,7 @@ import { BrowserModule } from "@angular/platform-browser";
 import { FormsModule } from "@angular/forms";
 import { AppComponent } from "./app.component";
 import { StoreModule } from "@ngrx/store";
-import { studentReducer } from "./reducers/student.reducer";
+import { reducer } from "./reducers/student.reducer";
 import { ListingComponent } from "./listing/listing.component";
 import { AddStudentComponent } from "./add-student/add-student.component";
 
@@ -11,7 +11,7 @@ import { AddStudentComponent } from "./add-student/add-student.component";
   imports: [
     BrowserModule,
     FormsModule,
-    StoreModule.forRoot({ students: studentReducer })
+    StoreModule.forRoot({ student: reducer })
   ],
   declarations: [AppComponent, AddStudentComponent, ListingComponent],
   bootstrap: [AppComponent]

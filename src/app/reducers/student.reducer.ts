@@ -8,8 +8,8 @@ const initialState: Student = {
   subject: "English"
 };
 
-export function studentReducer(
-  state: Student[] = initialState,
+export function reducer(
+  state: Student[] = [initialState],
   action: StudentActions.Actions
 ) {
   switch (action.type) {
