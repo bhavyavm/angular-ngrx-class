@@ -19,6 +19,7 @@ export class ListingComponent implements OnInit {
   ngOnInit() {}
 
   removeStudent(index) {
-    this.store.dispatch(new StudentActions.RemoveStudent(index));
+    this.store.dispatch(StudentActions.RemoveStudent(index));
+    //this.store.dispatch(new StudentActions.RemoveStudent(index));
   }
 }
