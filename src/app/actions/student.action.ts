@@ -2,22 +2,20 @@ import { Injectable } from "@angular/core";
 import { createAction, props } from "@ngrx/store";
 import { Student } from "./../models/student.model";
 
-
-
 export const AddStudent = createAction(
   "[STUDENT] Add",
   props<{ name: string; age: number; subject: string }>()
 );
 
 export const RemoveStudent = createAction(
-  "[STUDENT] Remove"
+  "[STUDENT] Remove",
+  props<{ index: number }>()
 );
 
 //using class
 
 // export const ADD_STUDENT = "[STUDENT] Add";
 // export const REMOVE_STUDENT = "[STUDENT] Remove";
-
 
 // export class AddStudent implements Action {
 //   readonly type = ADD_STUDENT;

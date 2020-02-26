@@ -9,9 +9,14 @@ const initialState: Student = {
 };
 
 const _studentReducer = createReducer(
-  initialState,
-  on(StudentActions.AddStudent, state => ([ ...state])),
-  on(StudentActions.RemoveStudent, state => ([...state]))
+  [initialState],
+  on(StudentActions.AddStudent, (state, item) => {
+    return [...state, item]
+  }),
+  on(StudentActions.RemoveStudent, (state, payload) => {
+    state.splice(payload.index, 1);
+    return state;
+  })
 );
 
 export function studentReducer(state, action) {
