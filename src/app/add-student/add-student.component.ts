@@ -17,7 +17,9 @@ export class AddStudentComponent implements OnInit {
   ngOnInit() {}
 
   addStudent(name, age, subject) {
-    this.store.dispatch(StudentActions.AddStudent({ name: name, age: age, subject: subject}));
+    this.store.dispatch(
+      StudentActions.AddStudent({ name: name, age: age, subject: subject })
+    );
 
     // this.store.dispatch(
     //   new StudentActions.AddStudent({ name: name, age: age, subject: subject })
